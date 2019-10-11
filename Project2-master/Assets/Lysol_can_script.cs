@@ -9,7 +9,7 @@ public class Lysol_can_script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio.Stop();
     }
 
     // Update is called once per frame
@@ -18,8 +18,13 @@ public class Lysol_can_script : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider box)
+    void OnTriggerEnter(Collider other)
     {
-        audio.Play();
+            audio.Play();
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        audio.Stop();
     }
 }

@@ -9,7 +9,7 @@ public class pickle_rick_script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio1.Stop();
     }
 
     // Update is called once per frame
@@ -21,5 +21,9 @@ public class pickle_rick_script : MonoBehaviour
     void OnTriggerEnter(Collider box)
     {
         audio1.Play();
+    }
+    void OnTriggerExit(Collider other)
+    {
+        audio1.Stop();
     }
 }

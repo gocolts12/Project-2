@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Computer_video : MonoBehaviour
 {
+    public GameObject Video1;
     // Start is called before the first frame update
     void Start()
     {
+        Video1 = GameObject.Find("vid1");
+        Video1.active = false;
         
     }
 
@@ -18,6 +21,7 @@ public class Computer_video : MonoBehaviour
 
     void OnTriggerEnter(Collider box)
     {
+        Video1.active = true;
 
     }
 }
